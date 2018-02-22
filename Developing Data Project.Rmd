@@ -1,0 +1,44 @@
+---
+title: "MPG Prediction Project"
+author: "MJL"
+date: "February 21, 2018"
+output: ioslides_presentation
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Introduction
+This peer assessed assignment has two parts. First, I created a Shiny application and deploy it on Rstudio's servers. Second, I used Rstudio Presenter to prepare a reproducible pitch presentation about my application.
+I selected to predict Miles per Gallon for cars with 4 specific characteristics that you may be interested in;
+
+* Number of Cylinders (4,6,8)
+* Gross Horsepower
+* Weight (in Tons)
+* Transmission type (Automatic, Manual)
+
+This shiny app will predict miles per gallon based on your input of these factors
+
+## Documentation
+Here is a summary of the mtcars dataset found in the datasets R package. As you can see, the factors were measured in 32 vehicles (years 1973-1974) tested by Motor Trend. The data looks at design, performance, and fuel consumption. Of the 11 variables I selected the 5 described.
+
+```{r data, echo=FALSE}
+library(datasets)
+data(mtcars)
+str(mtcars[,c(1:2,4,6,9)])
+```
+
+## Data Exploration
+Summary plot of the mtcars data with each of the selected variables plotted against each other
+
+```{r Summary, echo=FALSE}
+plot(mtcars[,c(1:2,4,6,9)])
+
+```
+
+## Links
+- shiny app: https://mlouricas.shinyapps.io/DevelopingDataProductsWeek4/
+- source code: https://github.com/mlouricas/DataDevelopment_Week4
